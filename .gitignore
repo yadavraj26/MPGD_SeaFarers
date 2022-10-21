@@ -8,6 +8,18 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+# Private developmental scenes
+[Aa]ssets/[Ss]adhana/
+[Aa]ssets/[Ss]adhana.meta
+[Aa]ssets/[Yy]adavraj/
+[Aa]ssets/[Yy]adavraj.meta
+[Aa]ssets/[Vv]asundhara/
+[Aa]ssets/[Vv]asundhara.meta
+[Aa]ssets/[Cc]asey/
+[Aa]ssets/[Cc]asey.meta
+[Aa]ssets/[Rr]ahul/
+[Aa]ssets/[Rr]ahul.meta
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
