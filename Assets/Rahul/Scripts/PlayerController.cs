@@ -60,10 +60,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log(playerHealth.maxHealth);
         }
 
-        if(collision.gameObject.CompareTag("Pickup"))
+        if(collision.gameObject.CompareTag("Health"))
         {
             playerHealth.IncreaseHealth(20);
             Debug.Log(playerHealth.maxHealth);
+        }
+
+        if (collision.gameObject.CompareTag("Oxygen"))
+        {
+            currentOxygen += 10;
         }
     }
 
