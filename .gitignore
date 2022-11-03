@@ -26,6 +26,9 @@
 [Aa]ssets/[Cc]asey.meta
 [Aa]ssets/[Rr]ahul/
 [Aa]ssets/[Rr]ahul.meta
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/EditorBuildSettings.asset
+
 # Visual Studio cache directory
 .vs/
 
