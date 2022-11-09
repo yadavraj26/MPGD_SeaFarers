@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 289672033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 6.22}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2133230845}
@@ -608,6 +608,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1681044901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8444247765060039255, guid: b824a82cdef54ac489db897519988335, type: 3}
+  m_PrefabInstance: {fileID: 8444247764716544788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133230844
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +653,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8444247764498436531, guid: b824a82cdef54ac489db897519988335, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1681044901}
     - target: {fileID: 8444247765060039248, guid: b824a82cdef54ac489db897519988335, type: 3}
       propertyPath: m_RootOrder
       value: 1
