@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     public float maxOxygen = 100f;
     public float currentOxygen;
+    public float oxygenDepletionRate;
+    public GameManager gmRef;
 
 
     private Vector3 moveDirection = Vector3.zero;
@@ -60,11 +62,33 @@ public class PlayerController : MonoBehaviour
             Debug.Log(playerHealth.maxHealth);
         }
 
-        if(collision.gameObject.CompareTag("Pickup"))
+        if(collision.gameObject.CompareTag("Health"))
         {
             playerHealth.IncreaseHealth(20);
             Debug.Log(playerHealth.maxHealth);
         }
+
+        if (collision.gameObject.CompareTag("Oxygen"))
+        {
+            currentOxygen += 10;
+        }
+
+        if (collision.gameObject.CompareTag("Test"))
+        {
+            Debug.Log("Fell into the depths of");
+        }
+
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            Debug.Log("Win");
+            gmRef.win();
+        }
+
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        
     }
 
     private void Attack()
@@ -79,7 +103,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentOxygen != 0)
         {
-            currentOxygen -= Time.deltaTime;
+            currentOxygen -= (Time.deltaTime * oxygenDepletionRate);
             Debug.Log(currentOxygen);
         }
         if (currentOxygen <= 0)
