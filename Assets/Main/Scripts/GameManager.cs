@@ -48,13 +48,13 @@ public class GameManager : MonoBehaviour
         oxygenUI.text = oxygenVar.ToString("F0");
     }
 
-    public void checkPoint(SC_CheckPoint checkPointRef)
+/*    public void checkPoint(SC_CheckPoint checkPointRef)
     {
         if(checkPointRef.checkPointCounter>currentCheckPoint)
         {
             currentCheckPoint = checkPointRef.checkPointCounter;
         }
-    }
+    }*/
 
     public void restart()
     {

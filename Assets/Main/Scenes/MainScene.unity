@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 198753981}
   m_Layer: 0
   m_Name: Platform (6)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 794619284}
   m_Layer: 0
   m_Name: Platform (9)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   UI: {fileID: 1689850641}
   oxygenUI: {fileID: 1795198732}
   uiManagerRef: {fileID: 799202562}
-  pcRef: {fileID: 1447957235}
+  pcRef: {fileID: 1990285253}
   oxygenVar: 100
 --- !u!4 &799202561
 Transform:
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   oxygenUI: {fileID: 1795198732}
   restartButton: {fileID: 503075821}
   gm: {fileID: 799202560}
-  pc: {fileID: 1447957235}
+  pc: {fileID: 1990285253}
   gameStatusRef: {fileID: 1942002218}
 --- !u!1001 &828713009
 PrefabInstance:
@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 943230035}
   m_Layer: 0
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 1017716724}
   m_Layer: 0
   m_Name: Platform (3)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 1060302543}
   m_Layer: 0
   m_Name: Platform (13)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 1245081125}
   m_Layer: 0
   m_Name: Platform (7)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1936,7 +1936,7 @@ GameObject:
   - component: {fileID: 1382871348}
   m_Layer: 0
   m_Name: Platform (11)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2019,17 +2019,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382871346}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1447957235 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8444247765060039249, guid: b824a82cdef54ac489db897519988335, type: 3}
-  m_PrefabInstance: {fileID: 1717601015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf93533fedc9eb4986b49a023af11cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1530011995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,7 +2033,7 @@ GameObject:
   - component: {fileID: 1530011997}
   m_Layer: 0
   m_Name: Platform (5)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2141,7 +2130,7 @@ GameObject:
   - component: {fileID: 1534320159}
   m_Layer: 0
   m_Name: Platform (10)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2362,6 +2351,10 @@ PrefabInstance:
       propertyPath: oxygenDepletionRate
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8444247765060039250, guid: b824a82cdef54ac489db897519988335, type: 3}
+      propertyPath: gmRef
+      value: 
+      objectReference: {fileID: 799202560}
     - target: {fileID: 8444247765060039255, guid: b824a82cdef54ac489db897519988335, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2387,7 +2380,7 @@ GameObject:
   - component: {fileID: 1724613628}
   m_Layer: 0
   m_Name: Platform (8)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2581,7 +2574,7 @@ GameObject:
   - component: {fileID: 1872842443}
   m_Layer: 0
   m_Name: Platform (12)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2683,7 +2676,7 @@ GameObject:
   - component: {fileID: 1887475235}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2780,7 +2773,7 @@ GameObject:
   - component: {fileID: 1903051434}
   m_Layer: 0
   m_Name: Platform (14)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2936,7 +2929,7 @@ GameObject:
   - component: {fileID: 1917469628}
   m_Layer: 0
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3213,6 +3206,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a80aea15df50a42b5cca30b1c8c5e9, type: 3}
+--- !u!114 &1990285253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8444247765060039250, guid: b824a82cdef54ac489db897519988335, type: 3}
+  m_PrefabInstance: {fileID: 1717601015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcd0af137363454bb16daab2bf092c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2059530792
 PrefabInstance:
   m_ObjectHideFlags: 0

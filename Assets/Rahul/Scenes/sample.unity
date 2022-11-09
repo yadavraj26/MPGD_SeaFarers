@@ -613,6 +613,46 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8444247765060039255, guid: b824a82cdef54ac489db897519988335, type: 3}
   m_PrefabInstance: {fileID: 8444247764716544788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681044902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681044901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fadc58a708a9c45ba266b049a70204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &1681044903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681044901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcd0af137363454bb16daab2bf092c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpHeight: 4
+  gravity: -9.81
+  maxOxygen: 100
+  currentOxygen: 0
+  oxygenDepletionRate: 0.6
+  gmRef: {fileID: 0}
+  isJumping: 0
+  isMoving: 0
+  characterController: {fileID: 1681044904}
+--- !u!143 &1681044904 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8444247765060039251, guid: b824a82cdef54ac489db897519988335, type: 3}
+  m_PrefabInstance: {fileID: 8444247764716544788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133230844
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +685,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2137279726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8444247764498436535, guid: b824a82cdef54ac489db897519988335, type: 3}
+  m_PrefabInstance: {fileID: 8444247764716544788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137279728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137279726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2ee86c56c3d414387fc7b1a12a4d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSenstivity: 100
+  player: {fileID: 1681044901}
 --- !u!1001 &8444247764716544788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,6 +764,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8444247764498436531, guid: b824a82cdef54ac489db897519988335, type: 3}
+    - {fileID: 8444247765060039250, guid: b824a82cdef54ac489db897519988335, type: 3}
+    - {fileID: 8444247765060039249, guid: b824a82cdef54ac489db897519988335, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b824a82cdef54ac489db897519988335, type: 3}

@@ -59,18 +59,19 @@ public class PlayerController : MonoBehaviour
         {
             isMoving = false;
             states = States.idle;
-            Debug.Log(states);
+            //Debug.Log(states);
         }
 
-        if (transform.localPosition.y <= 2)
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -gravity);
-                currentOxygen -= 2;
-                //Debug.Log(currentOxygen);
-            }
+            velocity.y = Mathf.Sqrt(jumpHeight * -gravity);
+            currentOxygen -= 2;
+            isJumping = true;
+            //Debug.Log(currentOxygen);
         }
+
+   
+
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
 
@@ -94,6 +95,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
 
     public void OnTriggerEnter(Collider collision)
         {
@@ -127,9 +129,12 @@ public class PlayerController : MonoBehaviour
 
         }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        
+        if(hit.gameObject.tag == "Platform")
+        {
+            isJumping = false;
+        }
     }
 
     private void Attack()

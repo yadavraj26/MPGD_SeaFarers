@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8444247764498436535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77cd6c3fd1bd95e458275d4c546a2bdf, type: 3}
+  m_Script: {fileID: 11500000, guid: cf2ee86c56c3d414387fc7b1a12a4d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSenstivity: 100
@@ -162,10 +162,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8444247765060039255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1327fe35f2d50c49b7da1f1a9ecebf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dcd0af137363454bb16daab2bf092c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  speed: 5
+  jumpHeight: 4
+  gravity: -9.81
+  maxOxygen: 100
+  currentOxygen: 0
+  oxygenDepletionRate: 0.6
+  gmRef: {fileID: 0}
+  isJumping: 0
+  isMoving: 0
+  characterController: {fileID: 8444247765060039251}
 --- !u!114 &8444247765060039249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,16 +184,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8444247765060039255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf93533fedc9eb4986b49a023af11cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 30fadc58a708a9c45ba266b049a70204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpHeight: 4
-  gravity: -9.81
-  maxOxygen: 100
-  currentOxygen: 0
-  oxygenDepletionRate: 0
-  characterController: {fileID: 8444247765060039251}
+  maxHealth: 100
 --- !u!1 &8444247765286412219
 GameObject:
   m_ObjectHideFlags: 0
