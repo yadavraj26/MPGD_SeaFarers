@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1492226554866776898}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: movePlatform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 5
+  speed: 10
 --- !u!65 &1492226554866776898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 3852385219282051162}
   m_Layer: 0
   m_Name: WaypointPlatform
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
