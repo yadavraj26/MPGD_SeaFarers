@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpHeight: 4
-  gravity: -5
+  gravity: -9.81
   maxOxygen: 100
   currentOxygen: 0
   oxygenDepletionRate: 0.6

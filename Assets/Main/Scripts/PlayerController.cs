@@ -47,10 +47,6 @@ public class PlayerController : MonoBehaviour
         {
             speed += 2f; // increasing the player speed for sprinting 
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed -= 2f;
-        }
 
         characterController.Move(moveDirection * speed * Time.deltaTime);
 
@@ -130,18 +126,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.tag == "Platform" || hit.gameObject.tag == "MarianaTrench" || hit.gameObject.tag == "movePlatform")
+        if(hit.gameObject.tag == "Platform")
         {
             isJumping = false; // checking if player is on the platform and changing the bool value of isJumping
-            Debug.Log("Landed on Platform");
-        }
-        if(hit.gameObject.tag == "movePlatform")
-        {
-            this.transform.SetParent(hit.gameObject.transform);
-        }
-        else
-        {
-            this.transform.SetParent(null);
         }
     }
 
