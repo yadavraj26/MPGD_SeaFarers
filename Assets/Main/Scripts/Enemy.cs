@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     NavMeshAgent navAgent;
     GameObject player;
+    [SerializeField]
     private PlayerHealth playerHealth;
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
         if (distance <= navAgent.stoppingDistance)
         {
             playerHealth.DecreaseHealth(20);
-            Debug.Log(playerHealth.maxHealth);
+            //Debug.Log(playerHealth.maxHealth);
         }
 
         if (distance > navAgent.stoppingDistance)
