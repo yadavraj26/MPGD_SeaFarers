@@ -17,16 +17,16 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    public void IncreaseHealth(float health)
+    public void IncreaseHealth(float health) 
     {
         if (maxHealth < 100)
         {
-            maxHealth += health;
+            maxHealth += health; // adds health  
         }
     }
 
     public void DecreaseHealth(float health)
     {
-        maxHealth = Mathf.Clamp(maxHealth - health, 0, maxHealth);
+        maxHealth = Mathf.Clamp(maxHealth - health, 0, maxHealth); // Subtracts the player health and keep it within a range[0-100]
     }
 }

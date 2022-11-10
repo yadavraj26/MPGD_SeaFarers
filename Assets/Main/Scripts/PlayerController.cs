@@ -41,11 +41,11 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        moveDirection = transform.right * x + transform.forward * z;
+        moveDirection = transform.right * x + transform.forward * z;  // gets position of the player in which direction it can move
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed += 2f;
+            speed += 2f; // increasing the player speed for sprinting 
         }
 
         characterController.Move(moveDirection * speed * Time.deltaTime);
@@ -53,21 +53,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Vertical") > 0f || Input.GetAxis("Horizontal") < 0f || Input.GetAxis("Vertical") < 0f)
         {
             isMoving = true;
-            states = States.move;
+            states = States.move;      // checking whether the player is moving or not, then changing the bool value and changing it's state
         }
         else
         {
             isMoving = false;
             states = States.idle;
-            //Debug.Log(states);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping) 
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -gravity); // allow player to jump at the cost of some oxygen 
             currentOxygen -= 2;
             isJumping = true;
-            //Debug.Log(currentOxygen);
         }
 
    
@@ -79,10 +77,7 @@ public class PlayerController : MonoBehaviour
 
         if (states == States.idle)
         {
-            //isMoving = false;   
-            currentOxygen -= 0.2f * Time.deltaTime;
-            //Debug.Log("Depleting amount: " + currentOxygen);
-
+            currentOxygen -= 0.2f * Time.deltaTime; // reducing the oxygen at lower level when at idle state
         }
 
     }
@@ -91,7 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         if (states == States.move)
         {
-            OxygenMeter();
+            OxygenMeter(); // reducing the oxygen at higher level if player is moving
         }
 
     }
@@ -102,18 +97,18 @@ public class PlayerController : MonoBehaviour
             if(collision.gameObject.CompareTag("Enemy"))
             {
                 playerHealth.DecreaseHealth(20);
-                Debug.Log(playerHealth.maxHealth);
+                Debug.Log(playerHealth.maxHealth); // player costs some health when enemy hits 
             }
 
             if(collision.gameObject.CompareTag("Health"))
             {
                 playerHealth.IncreaseHealth(20);
-                Debug.Log(playerHealth.maxHealth);
+                Debug.Log(playerHealth.maxHealth); // increasing health after collecting a health pickup
             }
 
             if (collision.gameObject.CompareTag("Oxygen"))
             {
-                currentOxygen += 10;
+                currentOxygen += 10; // adds oxygen after collecting oxygen pickup
             }
 
             if (collision.gameObject.CompareTag("Test"))
@@ -133,28 +128,28 @@ public class PlayerController : MonoBehaviour
     {
         if(hit.gameObject.tag == "Platform")
         {
-            isJumping = false;
+            isJumping = false; // checking if player is on the platform and changing the bool value of isJumping
         }
     }
 
     private void Attack()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1"))  // attack function
         {
             Debug.Log("Attacking!!");
         }
     }
 
-    public void OxygenMeter()
+    public void OxygenMeter()  
     {
         if (currentOxygen != 0)
         {
-            currentOxygen -= (Time.deltaTime * oxygenDepletionRate);
+            currentOxygen -= (Time.deltaTime * oxygenDepletionRate); // Reducing the player's oxygen over time
             Debug.Log(currentOxygen);
         }
-        if (currentOxygen <= 0)
+        if (currentOxygen <= 0) // if oxgyen is zero, player dies
         {
-            currentOxygen = 0;
+            currentOxygen = 0;  
             Debug.Log("Player is Dead!!");
         }
     }
