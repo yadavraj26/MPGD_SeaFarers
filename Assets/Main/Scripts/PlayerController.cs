@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ship"))
         {
             Debug.Log("Win");
-            gmRef.win();
+            gmRef.gameEnd(true);
         }
 
     }
@@ -149,12 +149,12 @@ public class PlayerController : MonoBehaviour
         }
         if (hit.gameObject.tag == "Ship")
         {
-            gmRef.win();
+            gmRef.gameEnd(true);
         }
         if(hit.gameObject.tag == "MarianaTrench")
         {
-            //gmRef.lose();
-            Debug.Log("Game lost");
+            gmRef.gameEnd(false);
+            //Debug.Log("Game lost");
         }
     }
 

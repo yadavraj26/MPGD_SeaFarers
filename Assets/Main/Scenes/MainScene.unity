@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -619,6 +623,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
@@ -1171,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
@@ -1422,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -1440,6 +1456,7 @@ GameObject:
   - component: {fileID: 673622354}
   - component: {fileID: 673622353}
   - component: {fileID: 673622352}
+  - component: {fileID: 673622355}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: MarianaTrench
@@ -1507,6 +1524,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673622355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673622351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fd74c3e5c8d5d429434b4d19ae7ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &746145110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1797,6 +1826,10 @@ MonoBehaviour:
   gm: {fileID: 799202560}
   pc: {fileID: 1990285253}
   gameStatusRef: {fileID: 1942002218}
+  healthBar: {fileID: 1734694501}
+  oxygenBar: {fileID: 1586400663}
+  playerHealthRef: {fileID: 1990285255}
+  healthUI: {fileID: 859239092}
 --- !u!1001 &813402940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2183,6 +2216,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836145581}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &859239092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4767419984466306478, guid: 200bbb48ab6767040938a306702ee881, type: 3}
+  m_PrefabInstance: {fileID: 900598500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &892130082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2234,6 +2278,10 @@ PrefabInstance:
     - target: {fileID: 5055283789868263445, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
@@ -2345,6 +2393,10 @@ PrefabInstance:
     - target: {fileID: 4352823642025293925, guid: 200bbb48ab6767040938a306702ee881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660856034587584834, guid: 200bbb48ab6767040938a306702ee881, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -4859,6 +4911,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5055283789868263445, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
   m_PrefabInstance: {fileID: 892130082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1586400663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8709938283392558365, guid: 200bbb48ab6767040938a306702ee881, type: 3}
+  m_PrefabInstance: {fileID: 900598500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1689850640 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4352823641038557360, guid: 200bbb48ab6767040938a306702ee881, type: 3}
@@ -5011,6 +5074,10 @@ PrefabInstance:
       propertyPath: gmRef
       value: 
       objectReference: {fileID: 799202560}
+    - target: {fileID: 8444247765060039250, guid: b824a82cdef54ac489db897519988335, type: 3}
+      propertyPath: oxygenDepletionRate
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8444247765060039255, guid: b824a82cdef54ac489db897519988335, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5216,6 +5283,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731806926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1734694501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7660856034587584834, guid: 200bbb48ab6767040938a306702ee881, type: 3}
+  m_PrefabInstance: {fileID: 900598500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1760001566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5332,6 +5410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -6437,6 +6519,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcd0af137363454bb16daab2bf092c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1990285255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8444247765060039249, guid: b824a82cdef54ac489db897519988335, type: 3}
+  m_PrefabInstance: {fileID: 1717601015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fadc58a708a9c45ba266b049a70204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2032642249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6990,6 +7083,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055283789868263454, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1990285255}
     - target: {fileID: 5055283789868263455, guid: 8f3c60745d1f6b94f8f0f97284aa36f2, type: 3}
       propertyPath: m_Name
       value: Enemy
