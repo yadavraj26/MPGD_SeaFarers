@@ -15,11 +15,8 @@ public class PlayerController : MonoBehaviour
     public float oxygenDepletionRate = 0.6f;
     public GameManager gmRef;
 
-    public GameObject cube;
-
     public bool isJumping;
     public bool isMoving;
-    public bool isSpawned;
 
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 velocity;
@@ -49,10 +46,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed += 2f; // increasing the player speed for sprinting 
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed -= 2f;
         }
 
         characterController.Move(moveDirection * speed * Time.deltaTime);
@@ -100,64 +93,42 @@ public class PlayerController : MonoBehaviour
 
 
     public void OnTriggerEnter(Collider collision)
-    {
-        if(collision.gameObject.CompareTag("Enemy"))
         {
-            playerHealth.DecreaseHealth(20);
-            Debug.Log(playerHealth.maxHealth); // player costs some health when enemy hits 
-        }
-
-        if(collision.gameObject.CompareTag("Health"))
-        {
-            playerHealth.IncreaseHealth(20);
-            Debug.Log(playerHealth.maxHealth); // increasing health after collecting a health pickup
-        }
-
-        if (collision.gameObject.CompareTag("Oxygen"))
-        {
-            currentOxygen += 10; // adds oxygen after collecting oxygen pickup
-            if (currentOxygen > maxOxygen)
+            if(collision.gameObject.CompareTag("Enemy"))
             {
-                currentOxygen = maxOxygen;
+                playerHealth.DecreaseHealth(20);
+                Debug.Log(playerHealth.maxHealth); // player costs some health when enemy hits 
             }
-        }
 
-        if (collision.gameObject.CompareTag("Test"))
-        {
-            Debug.Log("Fell into the depths of");
-        }
+            if(collision.gameObject.CompareTag("Health"))
+            {
+                playerHealth.IncreaseHealth(20);
+                Debug.Log(playerHealth.maxHealth); // increasing health after collecting a health pickup
+            }
 
-        if (collision.gameObject.CompareTag("Ship"))
-        {
-            Debug.Log("Win");
-            gmRef.gameEnd(true);
-        }
+            if (collision.gameObject.CompareTag("Oxygen"))
+            {
+                currentOxygen += 10; // adds oxygen after collecting oxygen pickup
+            }
 
-    }
+            if (collision.gameObject.CompareTag("Test"))
+            {
+                Debug.Log("Fell into the depths of");
+            }
+
+            if (collision.gameObject.CompareTag("Ship"))
+            {
+                Debug.Log("Win");
+                gmRef.win();
+            }
+
+        }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.gameObject.tag == "Platform")
         {
             isJumping = false; // checking if player is on the platform and changing the bool value of isJumping
-        }
-        if (hit.gameObject.tag == "movePlatform")
-        {
-            isJumping = false;
-            this.transform.SetParent(hit.gameObject.transform);
-        }
-        else
-        {
-            this.transform.SetParent(null);
-        }
-        if (hit.gameObject.tag == "Ship")
-        {
-            gmRef.gameEnd(true);
-        }
-        if(hit.gameObject.tag == "MarianaTrench")
-        {
-            gmRef.gameEnd(false);
-            //Debug.Log("Game lost");
         }
     }
 
@@ -166,8 +137,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))  // attack function
         {
             Debug.Log("Attacking!!");
-            SpawnCube();
-            isSpawned = true;
         }
     }
 
@@ -183,18 +152,5 @@ public class PlayerController : MonoBehaviour
             currentOxygen = 0;  
             Debug.Log("Player is Dead!!");
         }
-    }
-
-    public void SpawnCube()  // Spawning cubes to attack the enemy 
-    {
-        Vector3 playerDirec = transform.forward;
-        Vector3 playerPos = transform.position;
-
-        Vector3 spawnPos = playerDirec * 3 + playerPos;  
-
-        GameObject block = Instantiate(cube, spawnPos, transform.localRotation);
-
-        Destroy(block, 1.5f);
-        isSpawned = false;
     }
 }
