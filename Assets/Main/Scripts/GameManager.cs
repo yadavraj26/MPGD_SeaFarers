@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         oxygenVar = 100.0f;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -40,6 +41,11 @@ public class GameManager : MonoBehaviour
             //Time.timeScale = 0.0f;
             uiManagerRef.gameEnd(false);
 
+        }
+
+        if(pcRef.GetComponent<PlayerHealth>().maxHealth<=0)
+        {
+            uiManagerRef.gameEnd(false);
         }
     }
 
@@ -62,8 +68,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Assets/Main/Scenes/MainScene.unity");
     }
 
-    public void win()
+    public void gameEnd(bool gameStatus)
     {
-        uiManagerRef.gameEnd(true);
+        uiManagerRef.gameEnd(gameStatus);
+        
     }
 }

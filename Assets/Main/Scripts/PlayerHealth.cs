@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (maxHealth < 100)
         {
-            maxHealth += health; // adds health  
+           // maxHealth += health; // adds health  
         }
     }
 
