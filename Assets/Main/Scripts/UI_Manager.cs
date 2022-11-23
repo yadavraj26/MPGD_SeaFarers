@@ -13,10 +13,6 @@ public class UI_Manager : MonoBehaviour
     public GameManager gm;
     public PlayerController pc;
     public TextMeshProUGUI gameStatusRef;
-    public Image healthBar;
-    public Image oxygenBar;
-    public PlayerHealth playerHealthRef;
-    public TextMeshProUGUI healthUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,24 +23,15 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         oxygenUpdate();
-        healthUpdate();
     }
 
     void oxygenUpdate()
     {
         oxygenUI.text = pc.currentOxygen.ToString("F0");
-        oxygenBar.fillAmount = pc.currentOxygen / 100;
-    }
-
-    void healthUpdate()
-    {
-        healthUI.text = playerHealthRef.maxHealth.ToString("F0");
-        healthBar.fillAmount = playerHealthRef.maxHealth / 100;
     }
 
     public void gameEnd(bool gameStatus)
     {
-
         Cursor.lockState = CursorLockMode.None;
         restartButton.SetActive(true);
         if (gameStatus)
@@ -57,8 +44,5 @@ public class UI_Manager : MonoBehaviour
         }
 
         gameStatusRef.gameObject.SetActive(true);
-
-        Time.timeScale = 0;
-
     }
 }
