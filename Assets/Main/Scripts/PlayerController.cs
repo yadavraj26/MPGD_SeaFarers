@@ -13,16 +13,24 @@ public class PlayerController : MonoBehaviour
     public float maxOxygen = 100f;
     public float currentOxygen;
     public float oxygenDepletionRate = 0.6f;
-    public GameManager gmRef;
+    private float dist;
+    private float moveX;
+    private float moveZ;
+
+    public GameObject torch;
 
     public bool isJumping;
     public bool isMoving;
+    public bool isTorchOn;
+    public bool isRunning;
 
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 velocity;
 
+    public GameManager gmRef;
     private PlayerHealth playerHealth;
     public CharacterController characterController;
+    public Animator anim;
 
     public enum States { move, idle }
     private States states;
@@ -33,23 +41,26 @@ public class PlayerController : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
         currentOxygen = maxOxygen;
         states = States.idle;
+        torch.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        moveX = Input.GetAxis("Horizontal");
+        moveZ = Input.GetAxis("Vertical");
 
-        moveDirection = transform.right * x + transform.forward * z;  // gets position of the player in which direction it can move
+        moveDirection = transform.right * moveX + transform.forward * moveZ;  // gets position of the player in which direction it can move
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed += 2f; // increasing the player speed for sprinting 
+            speed += 2f; // increasing the player speed for sprinting
+            isRunning = true;
+            Debug.Log("Running");
         }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed -= 2f;
+            isRunning = false;
         }
 
         characterController.Move(moveDirection * speed * Time.deltaTime);
@@ -77,13 +88,41 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
 
-        Attack();
 
         if (states == States.idle)
         {
             currentOxygen -= 0.2f * Time.deltaTime; // reducing the oxygen at lower level when at idle state
         }
 
+
+        GameObject pickup = GameObject.FindWithTag("Health");
+
+        if (GameObject.FindWithTag("Health") == true)
+        {
+            dist = Vector3.Distance(pickup.transform.position, transform.position);
+        }
+
+        if (dist < 3)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playerHealth.IncreaseHealth(20);
+                Destroy(pickup);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.T) && !isTorchOn)
+        {
+            torch.SetActive(true);
+            isTorchOn = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.T) && isTorchOn)
+        {
+            torch.SetActive(false);
+            isTorchOn = false;
+        }
+
+        RunAnimations();
     }
 
     private void FixedUpdate()
@@ -100,14 +139,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            playerHealth.DecreaseHealth(20);
-            Debug.Log(playerHealth.maxHealth); // player costs some health when enemy hits 
-        }
-
-        if(collision.gameObject.CompareTag("Health"))
-        {
-            playerHealth.IncreaseHealth(20);
-            Debug.Log(playerHealth.maxHealth); // increasing health after collecting a health pickup
+            playerHealth.DecreaseHealth(20);    // player costs some health when enemy hits
         }
 
         if (collision.gameObject.CompareTag("Oxygen"))
@@ -126,7 +158,6 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ship"))
         {
-            Debug.Log("Win");
             gmRef.gameEnd(true);
         }
 
@@ -158,13 +189,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Attack()
-    {
-        if(Input.GetButtonDown("Fire1"))  // attack function
-        {
-            Debug.Log("Attacking!!");
-        }
-    }
 
     public void OxygenMeter()  
     {
@@ -178,5 +202,13 @@ public class PlayerController : MonoBehaviour
             currentOxygen = 0;  
             Debug.Log("Player is Dead!!");
         }
+    }
+
+    public void RunAnimations()
+    {
+        anim.SetFloat("yAxis", moveZ);
+        anim.SetFloat("xAxis", moveX);
+        anim.SetBool("Jump", isJumping);
+        anim.SetBool("Sprint", isRunning);
     }
 }
