@@ -7,13 +7,13 @@ public class Enemy : MonoBehaviour
 {
     NavMeshAgent navAgent;
     GameObject player;
-    [SerializeField]
-    private PlayerHealth playerHealth;
+    //[SerializeField]
+    public PlayerHealth playerHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
+        //playerHealth = GetComponent<PlayerHealth>();
         navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
     }
