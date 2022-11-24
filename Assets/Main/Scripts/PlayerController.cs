@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public bool isJumping;
     public bool isMoving;
-    public bool isTorchOn;
+    public bool isTorchOn=false;
     public bool isRunning;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping) 
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -gravity); // allow player to jump at the cost of some oxygen 
+            velocity.y = Mathf.Sqrt(jumpHeight * -gravity); //allow player to jump at the cost of some oxygen 
             currentOxygen -= 2;
             isJumping = true;
         }
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
         if (states == States.idle)
         {
-            currentOxygen -= 0.2f * Time.deltaTime; // reducing the oxygen at lower level when at idle state
+            currentOxygen -= 0.2f * Time.deltaTime; //reducing the oxygen at lower level when at idle state
         }
 
 
