@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 198753982}
   - component: {fileID: 198753981}
   m_Layer: 0
-  m_Name: Platform (6)
+  m_Name: P24
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 208756298}
   - component: {fileID: 208756297}
   m_Layer: 0
-  m_Name: Platform (33)
+  m_Name: P33
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 255828887}
   - component: {fileID: 255828886}
   m_Layer: 0
-  m_Name: Platform (19)
+  m_Name: P5
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 308674824}
   - component: {fileID: 308674823}
   m_Layer: 0
-  m_Name: Platform (18)
+  m_Name: P4
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 370023165}
   - component: {fileID: 370023164}
   m_Layer: 0
-  m_Name: Platform (34)
+  m_Name: P32
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 448915630}
   - component: {fileID: 448915629}
   m_Layer: 0
-  m_Name: Platform (29)
+  m_Name: P16
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 794619285}
   - component: {fileID: 794619284}
   m_Layer: 0
-  m_Name: Platform (9)
+  m_Name: P29
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1914,7 +1914,7 @@ GameObject:
   - component: {fileID: 819592735}
   - component: {fileID: 819592734}
   m_Layer: 0
-  m_Name: Platform (28)
+  m_Name: P15
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2139,7 +2139,7 @@ GameObject:
   - component: {fileID: 836145584}
   - component: {fileID: 836145583}
   m_Layer: 0
-  m_Name: Platform (30)
+  m_Name: P17
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 911260736}
   - component: {fileID: 911260735}
   m_Layer: 0
-  m_Name: Platform (31)
+  m_Name: P18
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2521,7 +2521,7 @@ GameObject:
   - component: {fileID: 943230036}
   - component: {fileID: 943230035}
   m_Layer: 0
-  m_Name: Platform (1)
+  m_Name: P20
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2618,7 +2618,7 @@ GameObject:
   - component: {fileID: 984134373}
   - component: {fileID: 984134372}
   m_Layer: 0
-  m_Name: Platform (20)
+  m_Name: P6
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 1017716725}
   - component: {fileID: 1017716724}
   m_Layer: 0
-  m_Name: Platform (3)
+  m_Name: P22
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2881,7 +2881,7 @@ GameObject:
   - component: {fileID: 1043948371}
   - component: {fileID: 1043948370}
   m_Layer: 0
-  m_Name: Platform (23)
+  m_Name: P10
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2978,7 +2978,7 @@ GameObject:
   - component: {fileID: 1060302544}
   - component: {fileID: 1060302543}
   m_Layer: 0
-  m_Name: Platform (13)
+  m_Name: P26
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3178,7 +3178,7 @@ GameObject:
   - component: {fileID: 1135857986}
   - component: {fileID: 1135857985}
   m_Layer: 0
-  m_Name: Platform (24)
+  m_Name: P11
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3275,7 +3275,7 @@ GameObject:
   - component: {fileID: 1151868167}
   - component: {fileID: 1151868166}
   m_Layer: 0
-  m_Name: Platform (27)
+  m_Name: P14
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3626,7 +3626,7 @@ GameObject:
   - component: {fileID: 1242390563}
   - component: {fileID: 1242390562}
   m_Layer: 0
-  m_Name: Platform (4)
+  m_Name: P2
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3723,7 +3723,7 @@ GameObject:
   - component: {fileID: 1245081126}
   - component: {fileID: 1245081125}
   m_Layer: 0
-  m_Name: Platform (7)
+  m_Name: P35
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3952,7 +3952,7 @@ GameObject:
   - component: {fileID: 1293778407}
   - component: {fileID: 1293778406}
   m_Layer: 0
-  m_Name: Platform (35)
+  m_Name: P31
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4177,7 +4177,7 @@ GameObject:
   - component: {fileID: 1382871349}
   - component: {fileID: 1382871348}
   m_Layer: 0
-  m_Name: Platform (11)
+  m_Name: P29
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4274,7 +4274,7 @@ GameObject:
   - component: {fileID: 1428942881}
   - component: {fileID: 1428942880}
   m_Layer: 0
-  m_Name: Platform (25)
+  m_Name: P12
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4371,7 +4371,7 @@ GameObject:
   - component: {fileID: 1448653711}
   - component: {fileID: 1448653710}
   m_Layer: 0
-  m_Name: Platform (21)
+  m_Name: P7
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4532,7 +4532,7 @@ GameObject:
   - component: {fileID: 1470287018}
   - component: {fileID: 1470287017}
   m_Layer: 0
-  m_Name: Platform (22)
+  m_Name: P9
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4698,7 +4698,7 @@ GameObject:
   - component: {fileID: 1530011998}
   - component: {fileID: 1530011997}
   m_Layer: 0
-  m_Name: Platform (5)
+  m_Name: P23
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4795,7 +4795,7 @@ GameObject:
   - component: {fileID: 1534320160}
   - component: {fileID: 1534320159}
   m_Layer: 0
-  m_Name: Platform (10)
+  m_Name: P28
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4892,7 +4892,7 @@ GameObject:
   - component: {fileID: 1564731330}
   - component: {fileID: 1564731329}
   m_Layer: 0
-  m_Name: Platform (16)
+  m_Name: P8
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5177,7 +5177,7 @@ GameObject:
   - component: {fileID: 1724613629}
   - component: {fileID: 1724613628}
   m_Layer: 0
-  m_Name: Platform (8)
+  m_Name: P36
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5274,7 +5274,7 @@ GameObject:
   - component: {fileID: 1731806929}
   - component: {fileID: 1731806928}
   m_Layer: 0
-  m_Name: Platform (17)
+  m_Name: P3
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,7 +5848,7 @@ GameObject:
   - component: {fileID: 1872842444}
   - component: {fileID: 1872842443}
   m_Layer: 0
-  m_Name: Platform (12)
+  m_Name: P27
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5945,7 +5945,7 @@ GameObject:
   - component: {fileID: 1887475236}
   - component: {fileID: 1887475235}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: P19
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6042,7 +6042,7 @@ GameObject:
   - component: {fileID: 1903051435}
   - component: {fileID: 1903051434}
   m_Layer: 0
-  m_Name: Platform (14)
+  m_Name: P30
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6139,7 +6139,7 @@ GameObject:
   - component: {fileID: 1917469629}
   - component: {fileID: 1917469628}
   m_Layer: 0
-  m_Name: Platform (2)
+  m_Name: P21
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6435,7 +6435,7 @@ GameObject:
   - component: {fileID: 1960107536}
   - component: {fileID: 1960107535}
   m_Layer: 0
-  m_Name: Platform (15)
+  m_Name: P1
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6679,7 +6679,7 @@ GameObject:
   - component: {fileID: 2063262411}
   - component: {fileID: 2063262410}
   m_Layer: 0
-  m_Name: Platform (32)
+  m_Name: P34
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6909,7 +6909,7 @@ GameObject:
   - component: {fileID: 2128842488}
   - component: {fileID: 2128842487}
   m_Layer: 0
-  m_Name: Platform (26)
+  m_Name: P13
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7031,7 +7031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3852385219282051161, guid: 518ef511386d0ce4eb0e9541701a4aeb, type: 3}
       propertyPath: m_Name
-      value: WaypointPlatform
+      value: P25Move
       objectReference: {fileID: 0}
     - target: {fileID: 3852385219282051162, guid: 518ef511386d0ce4eb0e9541701a4aeb, type: 3}
       propertyPath: m_RootOrder
