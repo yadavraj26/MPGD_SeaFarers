@@ -8673,6 +8673,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3852385218718691706, guid: 518ef511386d0ce4eb0e9541701a4aeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3852385218718691707, guid: 518ef511386d0ce4eb0e9541701a4aeb, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
