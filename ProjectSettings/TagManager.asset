@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MarianaTrench
+  - Ship
+  - Oxygen
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,7 @@ TagManager:
   - Water
   - UI
   - IsGround
-  - 
+  - postprocessing
   - 
   - 
   - 

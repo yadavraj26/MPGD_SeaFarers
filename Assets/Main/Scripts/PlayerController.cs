@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float dist;
     private float moveX;
     private float moveZ;
+    private float range = 3f;
 
     public GameObject torch;
 
@@ -94,8 +95,21 @@ public class PlayerController : MonoBehaviour
             currentOxygen -= 0.2f * Time.deltaTime; //reducing the oxygen at lower level when at idle state
         }
 
+        Collider[] cols = Physics.OverlapSphere(transform.position, range);
+        foreach(Collider col in cols)
+        {
+            if(col.tag == "Health")
+            {
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    playerHealth.IncreaseHealth(20);
+                    Destroy(col.gameObject);
+                }
+            }
+        }
 
-        GameObject pickup = GameObject.FindWithTag("Health");
+
+        /*GameObject pickup = GameObject.FindWithTag("Health");
 
         if (GameObject.FindWithTag("Health") == true)
         {
@@ -106,10 +120,9 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                playerHealth.IncreaseHealth(20);
-                Destroy(pickup);
+                
             }
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.T) && !isTorchOn)
         {
