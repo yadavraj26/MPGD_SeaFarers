@@ -2479,7 +2479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 133.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2487,7 +2487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4664,14 +4664,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686237359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.7, y: 24.84, z: 255.9}
+  m_LocalRotation: {x: -0, y: 0.9984545, z: -0, w: -0.05557552}
+  m_LocalPosition: {x: 94.1, y: -7.4, z: 236.9}
   m_LocalScale: {x: 59.18656, y: 107.83157, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 186.372, z: 0}
 --- !u!1 &708781387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151220564359583651, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
@@ -5361,7 +5361,7 @@ MonoBehaviour:
   oxygenBar: {fileID: 1586400663}
   playerHealthRef: {fileID: 1211396177}
   healthUI: {fileID: 859239092}
-  rearView: {fileID: 0}
+  rearView: {fileID: 351285657}
 --- !u!1001 &813402940
 PrefabInstance:
   m_ObjectHideFlags: 0

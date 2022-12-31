@@ -66,5 +66,6 @@ public class UI_Manager : MonoBehaviour
     public void EnableDisableRearView(bool isEnable)
     {
         rearView.gameObject.SetActive(isEnable);
+        Debug.Log("active");
     }
 }
