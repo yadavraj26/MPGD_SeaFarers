@@ -174,6 +174,11 @@ public class PlayerController : MonoBehaviour
             gmRef.gameEnd(true);
         }
 
+        if (collision.gameObject.CompareTag("FollowEnemy"))
+        {
+            gmRef.gameEnd(true);
+        }
+
     }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)

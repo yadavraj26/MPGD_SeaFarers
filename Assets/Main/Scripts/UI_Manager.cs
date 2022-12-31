@@ -17,6 +17,7 @@ public class UI_Manager : MonoBehaviour
     public Image oxygenBar;
     public PlayerHealth playerHealthRef;
     public TextMeshProUGUI healthUI;
+    public RawImage rearView;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,5 +61,10 @@ public class UI_Manager : MonoBehaviour
 
         Time.timeScale = 0;
 
+    }
+
+    public void EnableDisableRearView(bool isEnable)
+    {
+        rearView.gameObject.SetActive(isEnable);
     }
 }
