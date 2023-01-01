@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float maxOxygen = 100f;
     public float currentOxygen;
     public float oxygenDepletionRate = 0.6f;
-    private float dist;
     private float moveX;
     private float moveZ;
     private float range = 3f;
@@ -170,11 +169,6 @@ public class PlayerController : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("Ship"))
-        {
-            gmRef.gameEnd(true);
-        }
-
-        if (collision.gameObject.CompareTag("FollowEnemy"))
         {
             gmRef.gameEnd(true);
         }

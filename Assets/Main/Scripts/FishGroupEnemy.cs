@@ -42,7 +42,6 @@ public class FishGroupEnemy : MonoBehaviour
             waypointIndex = 0;
         }
         transform.LookAt(waypoints[waypointIndex].position);
-        transform.rotation *= Quaternion.Euler(0, 90, 0); // this adds a 90 degrees Y rotation
     }
 
     private void OnCollisionEnter(Collision c)
