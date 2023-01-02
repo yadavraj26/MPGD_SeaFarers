@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using UnityEngine;
 
 public class FishGroupEnemy : MonoBehaviour
@@ -10,11 +13,13 @@ public class FishGroupEnemy : MonoBehaviour
     private int waypointIndex;
     private float dist;
 
+
     // Start is called before the first frame update
     void Start()
     {
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
+        
 
     }
 
@@ -32,9 +37,12 @@ public class FishGroupEnemy : MonoBehaviour
     void Patrol()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+       
+
     }
 
-    void IncreaseIndex()
+   
+        void IncreaseIndex()
     {
         waypointIndex++;
         if (waypointIndex >= waypoints.Length)
