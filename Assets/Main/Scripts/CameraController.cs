@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class CameraController : MonoBehaviour
     public GameObject player;
 
     private float xRotation;
+
+    public Slider sensitivity;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -24,5 +28,10 @@ public class CameraController : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);  // setting range of offset for mouse rotation
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // rotates the camera in x direction
         player.transform.Rotate(Vector3.up * mouseX);
+    }
+
+    public void MouseSpeed(float mSpeed)
+    {
+        mouseSenstivity = mSpeed * 30;
     }
 }

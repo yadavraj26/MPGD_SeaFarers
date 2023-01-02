@@ -223,4 +223,23 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Jump", isJumping);
         anim.SetBool("Sprint", isRunning);
     }
+
+    public void SavePlayer()
+    {
+        LoadSystem.SavePlayer(this, playerHealth);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = LoadSystem.LoadPlayer();
+
+        currentOxygen = data.currentOxygen;
+        playerHealth.maxHealth = data.health;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+    }
 }

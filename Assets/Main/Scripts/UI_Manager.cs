@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UI_Manager : MonoBehaviour
@@ -28,6 +29,11 @@ public class UI_Manager : MonoBehaviour
     {
         oxygenUpdate();
         healthUpdate();
+
+        if(playerHealthRef.maxHealth <= 0)
+        {
+            SceneManager.LoadScene("LoseScene"); // when player dies, LoseScene will load
+        }
     }
 
     void oxygenUpdate()
