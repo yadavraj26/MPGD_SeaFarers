@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
 
     private float xRotation;
 
-    public Slider sensitivity;
     // Start is called before the first frame update
     void Start()
     {
