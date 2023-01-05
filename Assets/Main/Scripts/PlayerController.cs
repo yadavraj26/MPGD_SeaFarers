@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float range = 3f;
 
     public GameObject torch;
+    public GameObject pauseUI;
 
     public bool isJumping;
     public bool isMoving;
@@ -135,6 +136,15 @@ public class PlayerController : MonoBehaviour
         }
 
         RunAnimations();
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            SavePlayer();
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            LoadPlayer();
+        }
     }
 
     private void FixedUpdate()
@@ -241,5 +251,7 @@ public class PlayerController : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
+
+        pauseUI.SetActive(false);
     }
 }
