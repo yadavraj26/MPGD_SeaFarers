@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -93.173
       objectReference: {fileID: 0}
+    - target: {fileID: 8127941243129796907, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941243129796907, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8127941243168991395, guid: 220db73ed04d360409ed6568661177dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.03
@@ -164,6 +172,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -100.372
       objectReference: {fileID: 0}
+    - target: {fileID: 8127941243805661537, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941243805661537, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8127941243861270436, guid: 220db73ed04d360409ed6568661177dc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -215,6 +231,22 @@ PrefabInstance:
     - target: {fileID: 8127941243861270439, guid: 220db73ed04d360409ed6568661177dc, type: 3}
       propertyPath: m_TagString
       value: School
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941243897869340, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941243897869340, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941244058045159, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127941244058045159, guid: 220db73ed04d360409ed6568661177dc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8127941244201257174, guid: 220db73ed04d360409ed6568661177dc, type: 3}
       propertyPath: m_LocalPosition.x

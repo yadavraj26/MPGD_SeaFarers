@@ -9,10 +9,11 @@ public class FollowEnemyManager : MonoBehaviour
     public UI_Manager uiManagerRef;
     private bool isFollowing;
     private float timer=0.0f;
+    //public UI_Manager ui
     // Start is called before the first frame update
     void Start()
     {
-        
+        uiManagerRef = GameObject.FindWithTag("GameManager").GetComponent<UI_Manager>();
     }
 
     // Update is called once per frame
