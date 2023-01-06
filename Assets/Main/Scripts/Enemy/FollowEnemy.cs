@@ -12,7 +12,8 @@ public class FollowEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
+        player = GameObject.FindWithTag("Player");
+        //playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class FollowEnemy : MonoBehaviour
 
     public void StartStopFollow(bool isStart)
     {
+        gameObject.SetActive(isStart);
         startFollow = isStart;
     }
     private void OnCollisionEnter(Collision collision)
