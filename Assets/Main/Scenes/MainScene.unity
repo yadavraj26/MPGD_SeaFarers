@@ -7281,7 +7281,7 @@ GameObject:
   - component: {fileID: 1104719859}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Ship
+  m_TagString: Ship1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7294,7 +7294,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104719858}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -7358,7 +7358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104719858}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 211.71, y: 4.97, z: 197.09}
+  m_LocalPosition: {x: 211.71, y: 2.06, z: 197.09}
   m_LocalScale: {x: 7.8385763, y: 5.3400326, z: 3.6766074}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7829,6 +7829,7 @@ MonoBehaviour:
   maxOxygen: 100
   currentOxygen: 0
   oxygenDepletionRate: 0.6
+  healthDepletionRate: 1.2
   torch: {fileID: 708781387}
   pauseUI: {fileID: 115746073}
   isJumping: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -182,6 +183,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ship"))
         {
             gmRef.gameEnd(true);
+        }
+
+        if(collision.gameObject.CompareTag("Ship1"))
+        {
+            SceneManager.LoadScene("Level2 1");
         }
 
     }

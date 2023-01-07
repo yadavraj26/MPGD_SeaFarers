@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 820.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 109
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 257.98083, y: -15.79451, z: 293.2165}
+    m_Target: {x: 197.44633, y: 7.5256996, z: 327.41235}
     speed: 2
-    m_Value: {x: 257.98083, y: -15.79451, z: 293.2165}
+    m_Value: {x: 197.44633, y: 7.525699, z: 327.41235}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -655,13 +655,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.073117815, y: 0.9253762, z: -0.23412953, w: -0.2889915}
+    m_Target: {x: 0.06312067, y: 0.9258727, z: -0.3267964, w: 0.17883275}
     speed: 2
-    m_Value: {x: -0.073117815, y: 0.9253762, z: -0.23412953, w: -0.2889915}
+    m_Value: {x: 0.063120626, y: 0.925872, z: -0.32679617, w: 0.17883262}
   m_Size:
-    m_Target: 222.51532
+    m_Target: 24.24871
     speed: 2
-    m_Value: 222.51532
+    m_Value: 24.248709
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -717,23 +717,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ae1e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: eefaffff
+      m_ExpandedIDs: 54d6ffff1ce1ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Ship
+        m_OriginalName: Ship
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 41000
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -883,22 +883,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Main/Scripts
+    - Assets/Main/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Main/Scripts
+  - Assets/Main/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Rahul Yadav\Documents\GitHub\MPGD_SeaFarers
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: ca8b0000
-    m_LastClickedID: 35786
-    m_ExpandedIDs: 00000000988b00009a8b00009c8b00009e8b0000ffffff7f
+    m_SelectedIDs: 98890000
+    m_LastClickedID: 35224
+    m_ExpandedIDs: 00000000688900006a8900006c8900006e890000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -926,7 +926,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000988b00009a8b00009c8b00009e8b0000
+    m_ExpandedIDs: 00000000688900006a8900006c8900006e890000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
