@@ -529,17 +529,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1017655522232639404, guid: 49e07e8050a9db94f994848d70d54861, type: 3}
   m_PrefabInstance: {fileID: 296406252}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1270533479 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1017655522232639405, guid: 49e07e8050a9db94f994848d70d54861, type: 3}
-  m_PrefabInstance: {fileID: 296406252}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5f16ded1f4ab945a24e9ae757bdc57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1449582818 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5632715009639722436, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
@@ -733,19 +722,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632715009692461319, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5632715009692461319, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1270533479}
+      objectReference: {fileID: 1673238950}
     - target: {fileID: 5632715009692461319, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 5632715009692461319, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LoadingScreen, Assembly-CSharp
+      value: LoseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5632715009692461319, guid: f49b1e19af11fad47bf2511e5a75628a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument

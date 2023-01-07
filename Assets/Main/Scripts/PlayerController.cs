@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         currentOxygen = maxOxygen;
         states = States.idle;
         torch.SetActive(false);
+        //Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame

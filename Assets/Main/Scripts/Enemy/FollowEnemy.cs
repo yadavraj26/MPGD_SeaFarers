@@ -32,11 +32,12 @@ public class FollowEnemy : MonoBehaviour
     {
         if (startFollow)
         {
-            Vector3 relativePos = player.transform.position - transform.position;
+            Vector3 directionVector = player.transform.position - transform.position;
 
-            // the second argument, upwards, defaults to Vector3.up
-            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+            
+            Quaternion rotation = Quaternion.LookRotation(directionVector, Vector3.up);
             transform.rotation = rotation;
+            //To make the enemy follow more closely find the forward position of player and lerp to that pos
             gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position+(player.transform.forward*1),interpSpeed);
         }
 
@@ -44,24 +45,26 @@ public class FollowEnemy : MonoBehaviour
         float distance = Vector3.Distance(player.transform.position, transform.position);
         coolDownTimer -= Time.deltaTime;
         Mathf.Clamp(coolDownTimer, 0, 0.5f);
-
+        
+        //Check if player reached
         if (distance <= catchUpSpeed && coolDownTimer <= 0)
         {
 
             player.GetComponent<PlayerHealth>().DecreaseHealth(100);
             coolDownTimer = 0.5f;
-            //hitFlag = true;
-            //Debug.Log("Enemy hit");
+            
 
         }
 
     }
 
+    //Control for triggering the shark follow
     public void StartStopFollow(bool isStart)
     {
         gameObject.SetActive(isStart);
         startFollow = isStart;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collision");

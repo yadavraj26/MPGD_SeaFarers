@@ -227,17 +227,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1017655522232639404, guid: 49e07e8050a9db94f994848d70d54861, type: 3}
   m_PrefabInstance: {fileID: 203915925}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &203915927 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1017655522232639405, guid: 49e07e8050a9db94f994848d70d54861, type: 3}
-  m_PrefabInstance: {fileID: 203915925}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5f16ded1f4ab945a24e9ae757bdc57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &633530879
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,20 +730,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8444527919721579832, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8444527919721579832, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 203915927}
+      objectReference: {fileID: 8444527918773323331}
     - target: {fileID: 8444527919721579832, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8444527919721579832, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LoadingScreen, Assembly-CSharp
+      value: WinScreen, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
+--- !u!114 &8444527918773323331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8444527919319921944, guid: c4a5c90d116e71743b97b95805bc11e6, type: 3}
+  m_PrefabInstance: {fileID: 8444527918773323330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b5fdffdadea7448b5d5e6f526571b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

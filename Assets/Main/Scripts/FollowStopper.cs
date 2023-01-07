@@ -19,22 +19,12 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        /*Debug.Log("Start");
-        if(other.gameObject.CompareTag("Player"))
-        {
-            if(isStart)
-            {*/
+       // Stop all the Sharks from following the player
         foreach (GameObject i in followManagerRef)
         {
             i.GetComponent<FollowEnemyManager>().EnableDisableFollow(false);
         }
-        /*}
-        else
-        {
-            followEnemyRef.StartStopFollow(false);
-            uiManagerRef.EnableDisableRearView(false);
-        }
-    }*/
+       
     }
 
 }
