@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float maxOxygen = 100f;
     public float currentOxygen;
     public float oxygenDepletionRate = 0.6f;
+    public float healthDepletionRate = 1.2f;
     private float moveX;
     private float moveZ;
     private float range = 3f;
@@ -221,7 +222,8 @@ public class PlayerController : MonoBehaviour
         }
         if (currentOxygen <= 0) // if oxgyen is zero, player dies
         {
-            currentOxygen = 0;  
+            currentOxygen = 0;
+            playerHealth.maxHealth -= (Time.deltaTime * healthDepletionRate);
             Debug.Log("Player is Dead!!");
         }
     }
