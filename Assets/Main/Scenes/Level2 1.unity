@@ -322,10 +322,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 734341022}
     m_Modifications:
-    - target: {fileID: 566489841296706024, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
-      propertyPath: gmRef
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 566489841296706025, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
       propertyPath: m_Name
       value: Character
@@ -387,7 +383,6 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 566489841296706024, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
     - {fileID: 7151220564479902630, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7151220564479902631, guid: 72471bd0fb93cab4488b288cfff7a7f1, type: 3}
@@ -624,6 +619,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &256188009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4352823642025293927, guid: 200bbb48ab6767040938a306702ee881, type: 3}
+  m_PrefabInstance: {fileID: 1380447114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &262069006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4352823642485038496, guid: 200bbb48ab6767040938a306702ee881, type: 3}
@@ -4434,10 +4434,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1441938301}
   oxygenUI: {fileID: 262069006}
-  restartButton: {fileID: 0}
+  restartButton: {fileID: 256188009}
   gm: {fileID: 1931830926}
   pc: {fileID: 133783575}
-  gameStatusRef: {fileID: 0}
+  gameStatusRef: {fileID: 59314731}
   healthBar: {fileID: 172318125}
   oxygenBar: {fileID: 293101355}
   playerHealthRef: {fileID: 133783571}

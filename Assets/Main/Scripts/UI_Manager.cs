@@ -53,17 +53,19 @@ public class UI_Manager : MonoBehaviour
     {
 
         Cursor.lockState = CursorLockMode.None;
-        restartButton.SetActive(true);
+        //restartButton.SetActive(true);
         if (gameStatus)
         {
             gameStatusRef.text = "Win";
+            SceneManager.LoadScene("Assets/Main/Scenes/WinScene.unity");
         }
         else
         {
             gameStatusRef.text = "Try Again";
+            SceneManager.LoadScene("Assets/Main/Scenes/LoseScene.unity");
         }
 
-        gameStatusRef.gameObject.SetActive(true);
+        //gameStatusRef.gameObject.SetActive(true);
 
         Time.timeScale = 0;
 

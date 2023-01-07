@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 907267718106567507}
   - component: {fileID: 2333955050946476598}
   - component: {fileID: 566489841296706031}
-  - component: {fileID: 566489841296706024}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -351,32 +350,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &566489841296706024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566489841296706025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcd0af137363454bb16daab2bf092c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpHeight: 4
-  gravity: -9.81
-  maxOxygen: 100
-  currentOxygen: 0
-  oxygenDepletionRate: 0.6
-  torch: {fileID: 7151220564359583651}
-  isJumping: 0
-  isMoving: 0
-  isTorchOn: 0
-  isRunning: 0
-  gmRef: {fileID: 0}
-  characterController: {fileID: 566489841296706031}
-  anim: {fileID: 2333955050946476598}
 --- !u!1 &924284837250159736
 GameObject:
   m_ObjectHideFlags: 0

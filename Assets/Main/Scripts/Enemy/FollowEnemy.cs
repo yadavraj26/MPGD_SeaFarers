@@ -34,7 +34,7 @@ public class FollowEnemy : MonoBehaviour
         coolDownTimer -= Time.deltaTime;
         Mathf.Clamp(coolDownTimer, 0, 0.5f);
 
-        if (distance <= 1 && coolDownTimer <= 0)
+        if (distance <= 2.5 && coolDownTimer <= 0)
         {
 
             player.GetComponent<PlayerHealth>().DecreaseHealth(100);

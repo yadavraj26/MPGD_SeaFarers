@@ -77,9 +77,9 @@ public class PlayerController : MonoBehaviour
             states = States.idle;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping) 
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -gravity); //allow player to jump at the cost of some oxygen 
+            velocity.y = Mathf.Sqrt(jumpHeight * -gravity); //allow player to jump at the cost of some oxygen
             currentOxygen -= 2;
             isJumping = true;
         }
