@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Assets/Main/Scenes/MainScene.unity");
     }
 
     public void Options()

@@ -15,8 +15,10 @@ public class SplineGen : MonoBehaviour
     public GameObject[] hardEnemy;
     public GameObject[] enemies;
     public GameObject pickupRef;
-    public int waitToSpawn=2;
+    public int pickupScarcity = 2;
+    public PlayerController playerControllerRef;
 
+    private int waitToSpawnPickup=2;
     private int numEnemies;
     /*public Stack<GameObject> enemies;
     public Stack<GameObject> easyEnemy;
@@ -24,10 +26,21 @@ public class SplineGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerData data = LoadSystem.LoadPlayer();
         //splineGO = splineRef.GetComponent<Spline>();
         //splineGO.
-        
-        enemies = easyEnemy;
+        if (data != null && data.difficulty == 0)
+        {
+            enemies = easyEnemy;
+            pickupScarcity = 2;
+            playerControllerRef.difficultyLevel = 0;
+        }
+        else
+        {
+            enemies = hardEnemy;
+            pickupScarcity = 3;
+            playerControllerRef.difficultyLevel = 1;
+        }
         Debug.Log(SplineUtility.EvaluatePosition<Spline>(splineGO, distance));
         numEnemies = enemies.Length;
         Debug.Log(enemies);
@@ -103,7 +116,7 @@ public class SplineGen : MonoBehaviour
             spawned.transform.localScale = new Vector3(spawned.transform.localScale.x* rndScaleX, spawned.transform.localScale.y*rndScaleY, spawned.transform.localScale.z*rndScaleZ);
             spawned.transform.Rotate(new Vector3(0, Random.Range(0, 180), 0));
 
-            if(waitToSpawn==0)
+            if(waitToSpawnPickup==0)
             {
                 foreach(Transform t in spawned.transform)
                 {
@@ -113,9 +126,9 @@ public class SplineGen : MonoBehaviour
                         pickupObj.transform.position = t.position;
                     }
                 }
-                waitToSpawn = 2 + Random.Range(0, 2);
+                waitToSpawnPickup = pickupScarcity + Random.Range(0, (int)pickupScarcity/2);
             }
-            waitToSpawn--;
+            waitToSpawnPickup--;
         }
         Debug.Log("exit for loop");
     }

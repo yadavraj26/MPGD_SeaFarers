@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController characterController;
     public Animator anim;
 
+    public int difficultyLevel=0;
     public enum States { move, idle }
     private States states;
 
@@ -175,10 +176,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Test"))
+        /*if (collision.gameObject.CompareTag("Test"))
         {
             Debug.Log("Fell into the depths of");
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("Ship"))
         {
@@ -187,7 +188,7 @@ public class PlayerController : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Ship1"))
         {
-            SceneManager.LoadScene("Level2 1");
+            SceneManager.LoadScene("Assets/Main/Scenes/DifficultyScene.unity");
         }
 
     }

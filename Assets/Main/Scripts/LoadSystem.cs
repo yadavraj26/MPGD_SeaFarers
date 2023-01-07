@@ -17,6 +17,19 @@ public static class LoadSystem
         stream.Close();
     }
 
+
+    public static void SaveDifficultyLevel(int difficulty)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/player.txt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        PlayerData data = new PlayerData(difficulty);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.txt";

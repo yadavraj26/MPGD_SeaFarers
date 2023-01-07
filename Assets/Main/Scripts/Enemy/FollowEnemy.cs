@@ -8,11 +8,22 @@ public class FollowEnemy : MonoBehaviour
     public GameObject player;
     public float interpSpeed;
     public float coolDownTimer;
+    public PlayerController pControllerRef;
+    public float catchUpSpeed;
     Vector3 dumy;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        pControllerRef = player.GetComponent<PlayerController>();
+        if(pControllerRef.difficultyLevel==0)
+        {
+            catchUpSpeed = 1.5f;
+        }
+        else
+        {
+            catchUpSpeed = 2.5f;
+        }
         //playerHealth = player.GetComponent<PlayerHealth>();
     }
 
@@ -34,7 +45,7 @@ public class FollowEnemy : MonoBehaviour
         coolDownTimer -= Time.deltaTime;
         Mathf.Clamp(coolDownTimer, 0, 0.5f);
 
-        if (distance <= 2.5 && coolDownTimer <= 0)
+        if (distance <= catchUpSpeed && coolDownTimer <= 0)
         {
 
             player.GetComponent<PlayerHealth>().DecreaseHealth(100);

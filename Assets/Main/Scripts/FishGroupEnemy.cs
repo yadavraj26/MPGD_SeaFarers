@@ -12,6 +12,8 @@ public class FishGroupEnemy : MonoBehaviour
 
     private int waypointIndex;
     private float dist;
+    public GameObject player;
+    private float coolDownTimer;
 
 
     // Start is called before the first frame update
@@ -19,7 +21,8 @@ public class FishGroupEnemy : MonoBehaviour
     {
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
-        
+        player = GameObject.FindWithTag("Player");
+
 
     }
 
@@ -32,6 +35,19 @@ public class FishGroupEnemy : MonoBehaviour
             IncreaseIndex();
         }
         Patrol();
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+        coolDownTimer -= Time.deltaTime;
+        Mathf.Clamp(coolDownTimer, 0, 0.5f);
+
+        if (distance <= 2.6 && coolDownTimer <= 0)
+        {
+
+            player.GetComponent<PlayerHealth>().DecreaseHealth(20);
+            coolDownTimer = 0.5f;
+            Destroy(gameObject);
+            
+
+        }
     }
 
     void Patrol()

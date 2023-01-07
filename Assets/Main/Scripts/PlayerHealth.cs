@@ -27,6 +27,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void DecreaseHealth(float health)
     {
+        Debug.Log("Decreased");
         maxHealth = Mathf.Clamp(maxHealth - health, 0, maxHealth); // Subtracts the player health and keep it within a range[0-100]
+        Debug.Log("decrease"+maxHealth);
     }
 }
